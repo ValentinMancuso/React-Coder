@@ -1,16 +1,15 @@
-
 import { useEffect, useState } from "react";
 import { products } from "../../../productsMock";
-import "./ItemDetail.css"
+import "./ItemDetail.css";
 import { useParams } from "react-router-dom";
 
 const ItemDetail = () => {
   const [producto, setProductos] = useState({});
 
-  const {id} = useParams()
+  const { id } = useParams();
 
   useEffect(() => {
-  let productoSeleccionado = products.find((item) => item.id === Number(id));
+    let productoSeleccionado = products.find((item) => item.id === Number(id));
     const tarea = new Promise((resolve) => {
       resolve(productoSeleccionado);
     });
@@ -18,7 +17,6 @@ const ItemDetail = () => {
       .then((respuesta) => setProductos(respuesta))
       .catch((error) => console.log(error));
   }, [id]);
-
 
   return (
     <div className="containerProductos">
@@ -37,6 +35,5 @@ const ItemDetail = () => {
     </div>
   );
 };
-
 
 export default ItemDetail;

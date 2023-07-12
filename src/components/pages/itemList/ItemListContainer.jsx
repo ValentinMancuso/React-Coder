@@ -10,7 +10,8 @@ export default function ItemListContainer() {
 
   useEffect(() => {
     const tarea = new Promise((resolve) => {
-      let productosFiltrados = products.filter((item) => item.categoria === category
+      let productosFiltrados = products.filter(
+        (item) => item.categoria === category
       );
       resolve(category === undefined ? products : productosFiltrados);
     });

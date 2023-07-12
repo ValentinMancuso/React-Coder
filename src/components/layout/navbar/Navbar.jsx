@@ -128,7 +128,7 @@ function Navbar() {
                       my: 2,
                       color: "white",
                       display: "block",
-                      textDecoration: "none"
+                      textDecoration: "none",
                     }}
                   >
                     {page}

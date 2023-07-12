@@ -1,8 +1,5 @@
-
 const Footer = () => {
-  return (
-    <div>Venta de impresos argentina ♦ </div>
-  )
-}
+  return <div>Venta de impresos argentina ♦ </div>;
+};
 
-export default Footer
+export default Footer;
