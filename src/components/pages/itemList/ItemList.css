@@ -1,0 +1,66 @@
+.card {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px;
+  padding: 0px;
+  width: 340px;
+  height: 500px;
+  display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.titulo {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.precio {
+  font-size: 20px;
+}
+.contenedorInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  align-items: center;
+  height: 200px;
+}
+.contenedorTitulo {
+  padding-left: 0.8vw;
+}
+.contenedorComprar {
+  padding-right: 0.8vw;
+}
+.botonComprar {
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+    inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em 1.5em 0.75em;
+  background-color: #10ac84;
+  margin-left: 10px;
+}
+.botonComprar:active {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+  margin-top: 0.25em;
+  padding-bottom: 0.5em;
+}
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+  margin: 4vw;
+  justify-content: center;
+  background-color: transparent;
+}
+.fotoProducto {
+  object-fit: contain;
+  width: 337.78px;
+  height: 300px;
+}
+.contenedorFoto {
+  display: flex;
+}
