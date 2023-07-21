@@ -39,7 +39,7 @@ function Navbar() {
 
   return (
     <div>
-      <AppBar position="static" sx={{ backgroundColor: "#fc3d03" }}>
+      <AppBar position="static" sx={{ backgroundColor: "#E56817 " }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <LocalPrintshopIcon
