@@ -14,6 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 import { Link } from "react-router-dom";
+import ViewInArIcon from "@mui/icons-material/ViewInAr";
 
 const pages = ["Mates", "Soportes", "Juguetes"];
 const settings = ["Perfil", "Mi cuenta", "Estadisticas", "Cerrar sesion"];
@@ -42,9 +43,7 @@ function Navbar() {
       <AppBar position="static" sx={{ backgroundColor: "#E56817 " }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <LocalPrintshopIcon
-              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-            />
+            <ViewInArIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Link to="/">
               <Typography
                 variant="h6"
@@ -58,7 +57,7 @@ function Navbar() {
                   textDecoration: "none",
                 }}
               >
-                IMPRESIONES
+                MANCU3D
               </Typography>
             </Link>
 
