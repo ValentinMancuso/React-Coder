@@ -3,3 +3,107 @@
   border-style: solid;
   border-width: 1px;
 }
+.page1 {
+  background-color: rgb(247, 240, 240);
+  display: flex;
+  justify-content: center;
+}
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+.contenedorImg1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img1 {
+  width: 380px;
+  height: 480px;
+  object-fit: contain;
+}
+.contenedorInfo1 {
+  display: flex;
+  width: 390px;
+  height: 500px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #aaaaaa;
+  border-radius: 5px;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+.titulo1 {
+  margin: 15px;
+  font-size: 20px;
+  width: 360px;
+  height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+}
+.infoProduct {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.precio1 {
+  margin-left: 20px;
+  font-size: 30px;
+  color: #383838;
+}
+.contadorContainer {
+  margin-left: 20px;
+  display: flex;
+}
+.contadorContainer1 {
+  width: 360px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.contador {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+.botonComprar1{
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+    inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em 1.5em 0.75em;
+  background-color: #10ac84;
+}
+.botonComprar1:active {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+  margin-top: 0.25em;
+  padding-bottom: 0.5em;
+}
+.botonSuma {
+  background-color: white;
+  border-radius: 3px;
+  border-width: 1px;
+  color: rgb(80, 135, 253);
+  cursor: pointer;
+  border-color: #999999;
+}
+.botonResta{
+  background-color: white;
+  border-radius: 3px;
+  border-width: 1px;
+  color: rgb(80, 135, 253);
+  cursor: pointer;
+  border-color: #999999;
+  
+}

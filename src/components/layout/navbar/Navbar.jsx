@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 import { Link } from "react-router-dom";
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 
@@ -39,22 +38,23 @@ function Navbar() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <ViewInArIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Link to="/">
-              <Typography
-                variant="h6"
-                noWrap
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  textDecoration: "none",
-                }}
-              >
-                MANCU3D
-              </Typography>
-            </Link>
+            <Typography
+              variant="h6"
+              noWrap
+              component={Link}
+              to={`/`}
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              MANCU3D
+            </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -87,19 +87,28 @@ function Navbar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Link
+                      to={`/category/${page.toLowerCase()}`}
+                      key={page}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Typography
+                        textAlign="center"
+                        sx={{ textDecoration: "none", color: "black" }}
+                      >
+                        {page}
+                      </Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
-            <LocalPrintshopIcon
-              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-            />
+            <ViewInArIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
             <Typography
               variant="h5"
               noWrap
-              component="a"
-              href=""
+              component={Link}
+              to={`/`}
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -111,11 +120,15 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              IMPRESIONES
+              MANCU3D
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Link to={`/category/${page.toLowerCase()}`} key={page}>
+                <Link
+                  to={`/category/${page.toLowerCase()}`}
+                  key={page}
+                  style={{ textDecoration: "none" }}
+                >
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{

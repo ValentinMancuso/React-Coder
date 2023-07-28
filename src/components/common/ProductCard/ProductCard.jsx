@@ -14,9 +14,11 @@ const ProductCard = ({ item }) => {
           <p className="precio">${item.price}</p>
         </div>
         <div className="contenedorComprar">
-          <button className="botonComprar" id="botonComprar${item.id}">
-            Comprar
-          </button>
+          <Link to={`/ItemDetail/${item.id}`}>
+            <button className="botonComprar" id="botonComprar${item.id}">
+              Comprar
+            </button>
+          </Link>
         </div>
       </div>
     </div>

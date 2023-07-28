@@ -59,10 +59,3 @@
 .contenedorFoto {
   display: flex;
 }
-.lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
-  padding: 4vw;
-  justify-content: center;
-  background-color: rgb(247, 240, 240);
-}

@@ -1,0 +1,11 @@
+.productoCompradoContainer{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    height: 50px;
+    width: 1000px;
+    display: flex;
+}
+.list{
+    margin-top: 50px;
+}

@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const CheckoutContainer = () => {
   const [data, setData] = useState({ nombre: "", telefono: "", email: "" });
 
-  let { cart, getTotalPrice } = useContext(CartContext);
+  let { cart, getTotalPrice, clearCart } = useContext(CartContext);
   const [orderId, setOrderid] = useState("");
 
   let total = getTotalPrice();
@@ -37,9 +37,11 @@ const CheckoutContainer = () => {
         stock: element.stock - element.cantidad,
       });
     });
+    clearCart()
   };
   const capturarInfo = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
+
   };
 
   return (

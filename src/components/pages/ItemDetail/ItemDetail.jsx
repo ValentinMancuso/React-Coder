@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import "./ItemDetail.css";
 import { useParams } from "react-router-dom";
-import CounterContainer from "../../CounterContainer/CounterContainer";
+import CounterContainer from "../../common/CounterContainer/CounterContainer";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 import { db } from "../../../firebaseConfig";
 import { getDoc, collection, doc } from "firebase/firestore";
+import "../ItemDetail/ItemDetail.css";
 
 const ItemDetail = () => {
   const [producto, setProducto] = useState({});
@@ -39,22 +39,26 @@ const ItemDetail = () => {
   };
 
   return (
-    <div className="containerProductos">
-      {" "}
-      <div className="card" key={producto.id}>
-        <div className="contenedorFoto">
-          <img className="fotoProducto" src={producto.img} />
+    <div className="page1">
+      <div className="container1" key={producto.id}>
+        <div className="contenedorImg1">
+          <img className="img1" src={producto.img} />
         </div>
-        <div className="contenedorInfo">
-          <div className="contenedorTitulo">
-            <b className="titulo">{producto.title}</b>
-            <p className="precio">${producto.price}</p>
-            {producto.stock === 0 ? <div>No hay stock</div> : <CounterContainer
-              stock={producto.stock}
-              onAdd={onAdd}
-              cantidad={cantidad}
-            />}
-            
+        <div className="contenedorInfo1">
+          <div className="infoProduct">
+            <b className="titulo1">{producto.title}</b>
+            <h3 className="precio1">${producto.price}</h3>
+          </div>
+          <div className="contadorContainer">
+            {producto.stock === 0 ? (
+              <div>No hay stock</div>
+            ) : (
+              <CounterContainer
+                stock={producto.stock}
+                onAdd={onAdd}
+                cantidad={cantidad}
+              />
+            )}
           </div>
         </div>
       </div>
