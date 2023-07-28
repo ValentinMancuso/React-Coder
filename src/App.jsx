@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/pages/itemList/ItemListContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import Layout from "./components/layout/Layout";
-import ItemDetail from "./components/pages/ItemDetail/itemDetail";
 import CheckoutContainer from "./components/pages/checkout/CheckoutContainer";
 import CartContextProvider from "./context/CartContext";
+import ItemDetail from "./components/pages/ItemDetail/ItemDetail";
 
 function App() {
   return (
